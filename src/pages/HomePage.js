@@ -1,10 +1,10 @@
 import React from "react";
 
-const HomePage = ({ title, subTitle, text }) => (
+import Hero from "../components/Hero";
+
+const HomePage = ({ ...props }) => (
   <>
-    <h1>{title}</h1>
-    <h3>{subTitle}</h3>
-    <p>{text}</p>
+    <Hero {...props} />
   </>
 );
 
