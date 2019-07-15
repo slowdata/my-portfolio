@@ -20,7 +20,7 @@ class App extends Component {
     ],
     home: {
       title: "Be Relentless",
-      subTitle: "Modern projects that make a difference",
+      subTitle: "Projects that make a difference",
       text: "Checkout my projects below"
     },
     about: {
