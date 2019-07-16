@@ -28,11 +28,17 @@ class App extends Component {
     },
     contact: {
       title: "Let's talk"
-    }
+    },
+    isHome: true
+  };
+  onHandleClick = path => {
+    path.length !== 1
+      ? this.setState({ isHome: false })
+      : this.setState({ isHome: true });
   };
 
   render() {
-    const { headerLinks, home, about, contact } = this.state;
+    const { headerLinks, home, about, contact, isHome } = this.state;
     return (
       <Router>
         <Container className="p-0" fluid={true}>
@@ -46,6 +52,7 @@ class App extends Component {
                     className="nav-link"
                     key={hlink.title.toLowerCase()}
                     to={hlink.path}
+                    onClick={() => this.onHandleClick(hlink.path)}
                   >
                     {hlink.title}
                   </Link>
@@ -61,8 +68,8 @@ class App extends Component {
               component={() => <ContactPage {...contact} />}
             />
           </div>
-          <Footer />
         </Container>
+        <Footer isHome={isHome} />
       </Router>
     );
   }

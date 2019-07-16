@@ -15,15 +15,15 @@ class Carousel extends Component {
       {
         id: 0,
         title: "Make Teams for Tiago",
-        subTitle: "Simple app to creat soccer teams.",
+        subTitle: "Simple app to make soccer teams.",
         imgSrc: soccerteams,
         link: "https://maketeamsfortiago.netlify.com",
         selected: false
       },
       {
         id: 1,
-        title: "O Credito",
-        subTitle: "O Credito Homepage and Blog",
+        title: "OCredito",
+        subTitle: "Homepage and Blog for OCredito",
         imgSrc: ocredito,
         link: "https://ocredito.pt",
         selected: false
@@ -31,7 +31,7 @@ class Carousel extends Component {
       {
         id: 2,
         title: "Saft Helper",
-        subTitle: "Little helper for Saft file",
+        subTitle: "Little helper for Saft files",
         imgSrc: safthelper,
         link: "https://github.com/slowdata/saft_helper",
         selected: false
@@ -61,7 +61,7 @@ class Carousel extends Component {
   render() {
     const { items } = this.state;
     return (
-      <Container fluid={true}>
+      <Container fluid={true} style={{ marginBottom: 70 }}>
         <Row className="justify-content-around">{this.makeItems(items)}</Row>
       </Container>
     );

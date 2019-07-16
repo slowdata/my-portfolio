@@ -1,10 +1,14 @@
 import React from "react";
 
-const Footer = () => (
-  <footer className="navbar transparent sticky-bottom ">
-    <p className="navbar-text">Ricardo Dias</p>
-    <p className="navbar-text">This site was made by Ricardo Dias</p>
-  </footer>
-);
+import Navbar from "react-bootstrap/Navbar";
+
+const Footer = ({ isHome }) => {
+  const place = isHome ? { sticky: "bottom" } : { fixed: "bottom" };
+  return (
+    <Navbar {...place} className="border-top bg-light">
+      Ricardo Dias
+    </Navbar>
+  );
+};
 
 export default Footer;

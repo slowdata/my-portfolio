@@ -1,6 +1,6 @@
 import React from "react";
 
-const HomePAge = ({ title, subTitle, text }) => (
+const ContactPage = ({ title, subTitle, text }) => (
   <>
     <h1>{title}</h1>
     <h3>{subTitle}</h3>
@@ -8,4 +8,4 @@ const HomePAge = ({ title, subTitle, text }) => (
   </>
 );
 
-export default HomePAge;
+export default ContactPage;
