@@ -14,15 +14,15 @@ class Carousel extends Component {
     items: [
       {
         id: 0,
-        title: "Soccer Teams",
-        subTitle: "Make Teams for Tiago",
+        title: "Make Teams for Tiago",
+        subTitle: "Simple app to creat soccer teams.",
         imgSrc: soccerteams,
-        link: "https://github.com/slowdata/football-teams",
+        link: "https://maketeamsfortiago.netlify.com",
         selected: false
       },
       {
         id: 1,
-        title: "OCredito",
+        title: "O Credito",
         subTitle: "O Credito Homepage and Blog",
         imgSrc: ocredito,
         link: "https://ocredito.pt",
