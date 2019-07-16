@@ -45,7 +45,6 @@ class Carousel extends Component {
       item.selected = item.id !== id ? false : true;
       return item;
     });
-    console.log(newItems);
     this.setState({ items: newItems });
   };
 

@@ -1,11 +1,10 @@
 import React from "react";
-import Navbar from "react-bootstrap/Navbar";
 
 const Footer = () => (
-  <Navbar bg="transparent" fixed="bottom">
-    <p>Ricardo Dias</p>
-    <p className="text-right">This site was made by Ricardo Dias</p>
-  </Navbar>
+  <nav className="navbar transparent sticky-bottom ">
+    <p className="navbar-text">Ricardo Dias</p>
+    <p className="navbar-text">This site was made by Ricardo Dias</p>
+  </nav>
 );
 
 export default Footer;
