@@ -4,11 +4,13 @@ import Carousel from "../components/Carousel";
 
 import Hero from "../components/Hero";
 
-const HomePage = ({ ...props }) => (
-  <>
-    <Hero {...props} />
-    <Carousel />
-  </>
-);
+const HomePage = ({ ...props }) => {
+  return (
+    <>
+      <Hero {...props} />
+      <Carousel />
+    </>
+  );
+};
 
 export default HomePage;

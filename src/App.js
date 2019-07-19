@@ -19,8 +19,8 @@ class App extends Component {
       { title: "Contact", path: "/contact" }
     ],
     home: {
-      title: "Be Relentless",
-      subTitle: "Projects that make a difference",
+      title: "Always evolving",
+      subTitle: `Bringing projects to a modern age`,
       text: "Checkout my projects below"
     },
     about: {
@@ -32,8 +32,8 @@ class App extends Component {
     isHome: true
   };
   onHandleClick = path => {
-    console.log(path);
-    path.length !== 1
+    console.log(path.length);
+    path.length > 1
       ? this.setState({ isHome: false })
       : this.setState({ isHome: true });
   };

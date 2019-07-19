@@ -15,12 +15,12 @@ class ContactPage extends Component {
   render() {
     const { title } = this.props;
     return (
-      <div>
+      <>
         <Hero title={title} />
         <Content>
           <Form>Coisas</Form>
         </Content>
-      </div>
+      </>
     );
   }
 }

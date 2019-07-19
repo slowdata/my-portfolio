@@ -3,7 +3,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import Content from "../components/Content";
 
-const AboutPage = ({ title, subTitle, text }) => (
+const AboutPage = ({ title }) => (
   <>
     <Hero title={title} />
     <Content>
