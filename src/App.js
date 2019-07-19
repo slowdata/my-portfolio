@@ -32,7 +32,6 @@ class App extends Component {
     isHome: true
   };
   onHandleClick = path => {
-    console.log(path.length);
     path.length > 1
       ? this.setState({ isHome: false })
       : this.setState({ isHome: true });
