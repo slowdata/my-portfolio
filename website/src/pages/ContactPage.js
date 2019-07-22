@@ -21,13 +21,25 @@ class ContactPage extends Component {
   };
 
   handleSubmit = e => {
+    const { name, email, message } = this.state;
     Axios.post("http://localhost:8888/email", {
-      name: this.state.name
-    }).then(res => {
-      alert(res.data.message);
-    });
+      name,
+      email,
+      message
+    })
+      .then(res => {
+        console.log("data: ", res.data);
 
-    this.setState({ disabled: true, emailSent: true });
+        if (res.status === 200 && res.data.success) {
+          this.setState({ emailSent: true, disabled: true });
+        } else {
+          this.setState({ emailSent: false, disabled: false });
+        }
+      })
+      .catch(err => {
+        console.error(err.message);
+        this.setState({ emailSent: false, disabled: false });
+      });
     e.preventDefault();
   };
 

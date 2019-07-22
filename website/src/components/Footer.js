@@ -7,7 +7,7 @@ const Footer = ({ isHome }) => {
   return (
     <Navbar {...place} className="bg-transparent border-top bg-light">
       <div className="container-fluid text-right">
-        <div className="col-12">Feito por Ricardo Dias</div>
+        <div className="col-12">This site was made by Ricardo Dias</div>
       </div>
     </Navbar>
   );
