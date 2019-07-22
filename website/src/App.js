@@ -29,20 +29,32 @@ class App extends Component {
     contact: {
       title: "Let's talk"
     },
-    isHome: true
+    isHome: true,
+    isExpanded: false
   };
   onHandleClick = path => {
     path.length > 1
-      ? this.setState({ isHome: false })
-      : this.setState({ isHome: true });
+      ? this.setState({ isHome: false, isExpanded: false })
+      : this.setState({ isHome: true, isExpanded: false });
   };
 
+  handleToggle = () => {
+    this.setState(prevState => {
+      return { isExpanded: !prevState.isExpanded };
+    });
+  };
   render() {
     const { headerLinks, home, about, contact, isHome } = this.state;
     return (
       <Router>
         <Container className="p-0" fluid={true}>
-          <Navbar className="border-bottom" bg="transparent" expand="lg">
+          <Navbar
+            className="border-bottom"
+            bg="transparent"
+            expand="lg"
+            onToggle={this.handleToggle}
+            expanded={this.state.isExpanded}
+          >
             <Navbar.Brand>{this.state.title}</Navbar.Brand>
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">

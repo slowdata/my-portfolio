@@ -61,7 +61,7 @@ class Carousel extends Component {
   render() {
     const { items } = this.state;
     return (
-      <Container fluid={true} style={{ marginBottom: 70 }}>
+      <Container fluid={true} style={{ marginBottom: 50 }}>
         <Row className="justify-content-around">{this.makeItems(items)}</Row>
       </Container>
     );

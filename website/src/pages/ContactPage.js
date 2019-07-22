@@ -50,7 +50,7 @@ class ContactPage extends Component {
       <>
         <Hero title={title} />
         <Content>
-          <Form onSubmit={this.handleSubmit}>
+          <Form className="mb-xl-5" onSubmit={this.handleSubmit}>
             <Form.Group>
               <Form.Label htmlFor="full-name">Full Name</Form.Label>
               <Form.Control
